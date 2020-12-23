@@ -34,5 +34,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Intent intent=getIntent();
+        if(intent.hasExtra("input1"))
+        {
+            Bundle bundle=getIntent().getExtras();
+            String receivedStr=bundle.getString("input1");
+            value.setText(receivedStr);
+        }
+        else {
+            value.setText("receivedStr");
+        }
     }
 }
