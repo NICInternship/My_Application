@@ -52,4 +52,9 @@ public class MainActivity extends AppCompatActivity {
             value.setText("receivedStr");
         }
     }
+
+    public void layoutNav(View view)
+    {
+
+    }
 }

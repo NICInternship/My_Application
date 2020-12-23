@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".GridDemo"></activity>
+        <activity android:name=".ListDemo" />
+        <activity android:name=".FrameDemo" />
+        <activity android:name=".AbsoluteDemo" />
+        <activity android:name=".TableDemo" />
+        <activity android:name=".ConstraintDemo" />
+        <activity android:name=".RelativeDemo" />
+        <activity android:name=".LinearDemo" />
+        <activity android:name=".LayoutDemo" />
+        <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
