@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.ConstraintDemo">
+
+
+    <ImageView
+        android:id="@+id/enterImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/image_alternative"
+        android:labelFor="@id/textEdit"
+        android:src="@drawable/enter_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textEdit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/passwordText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterImage"
+        app:layout_constraintVertical_bias="0.203"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/numPassText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textEdit"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <EditText
+        android:id="@+id/numPassText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@id/emailText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordText"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@id/phoneText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numPassText"
+        app:layout_constraintVertical_bias="0.203" />
+
+
+    <EditText
+        android:id="@+id/phoneText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailText"
+        app:layout_constraintVertical_bias="0.203" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toTopOf="@id/clickButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneText"
+        app:layout_constraintVertical_bias="0.203">
+
+        <RadioButton
+            android:id="@+id/editRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Edit Text" />
+
+        <RadioButton
+            android:id="@+id/passwordRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Password" />
+
+        <RadioButton
+            android:id="@+id/numPassRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Number Password" />
+
+        <RadioButton
+            android:id="@+id/emailRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="E-Mail" />
+
+        <RadioButton
+            android:id="@+id/phoneRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Phone"
+             />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/clickButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="20"
+        android:onClick="clickMe"
+        android:text="@string/click_me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintVertical_bias="0.203" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,15 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Layout.TableDemo" />
-        <activity android:name=".Layout.RelativeDemo" />
-        <activity android:name=".Layout.ListDemo" />
-        <activity android:name=".Layout.LinearDemo" />
-        <activity android:name=".Layout.GridDemo" />
-        <activity android:name=".Layout.FrameDemo" />
-        <activity android:name=".Layout.ConstraintDemo" />
-        <activity android:name=".Layout.AbsoluteDemo" />
-        <activity android:name=".LayoutDemo" />
+        <activity android:name=".fragments.FragmentDemo"></activity>
+        <activity
+            android:name=".layout.TableDemo"
+            android:label="Table Layout" />
+        <activity
+            android:name=".layout.RelativeDemo"
+            android:label="Relative Layout" />
+        <activity
+            android:name=".layout.ListDemo"
+            android:label="List Layout" />
+        <activity
+            android:name=".layout.LinearDemo"
+            android:label="Linear Layout" />
+        <activity
+            android:name=".layout.GridDemo"
+            android:label="Grid Layout" />
+        <activity
+            android:name=".layout.FrameDemo"
+            android:label="Frame Layout" />
+        <activity
+            android:name=".layout.ConstraintDemo"
+            android:label="Constraint Layout"></activity>
+        <activity
+            android:name=".layout.AbsoluteDemo"
+            android:label="Absolute Layout" />
+        <activity
+            android:name=".layout.LayoutDemo"
+            android:label="Layout Demo" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
