@@ -1,4 +1,4 @@
-package com.nic.myapplication.Layout;
+package com.nic.myapplication.layout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nic.myapplication.R;
@@ -19,11 +18,11 @@ public class ConstraintDemo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_constraint_demo);
-        //radioGroup=findViewById(R.id.radioGroup);
+        setContentView(R.layout.activity_constraint_demo);
+        radioGroup=findViewById(R.id.radioGroup);
     }
 
-    /*public void clickMe(View view) {
+    public void clickMe(View view) {
         switch (radioGroup.getCheckedRadioButtonId())
         {
             case R.id.editRadio:
@@ -57,7 +56,7 @@ public class ConstraintDemo extends AppCompatActivity {
                 break;
             }
         }
-    }*/
+    }
 
     private void displayMethod(int id) {
         input=findViewById(id);
