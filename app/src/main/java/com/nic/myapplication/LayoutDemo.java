@@ -6,6 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.nic.myapplication.Layout.AbsoluteDemo;
+import com.nic.myapplication.Layout.ConstraintDemo;
+import com.nic.myapplication.Layout.FrameDemo;
+import com.nic.myapplication.Layout.GridDemo;
+import com.nic.myapplication.Layout.LinearDemo;
+import com.nic.myapplication.Layout.ListDemo;
+import com.nic.myapplication.Layout.RelativeDemo;
+import com.nic.myapplication.Layout.TableDemo;
+
 public class LayoutDemo extends AppCompatActivity {
 
     Intent intent;
@@ -17,49 +26,49 @@ public class LayoutDemo extends AppCompatActivity {
 
     public void linearButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,LinearDemo.class);
+        intent=new Intent(LayoutDemo.this, LinearDemo.class);
         startActivity(intent);
     }
 
     public void relativeButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,RelativeDemo.class);
+        intent=new Intent(LayoutDemo.this, RelativeDemo.class);
         startActivity(intent);
     }
 
     public void constraintButton(View veiw)
     {
-        intent=new Intent(LayoutDemo.this,ConstraintDemo.class);
+        intent=new Intent(LayoutDemo.this, ConstraintDemo.class);
         startActivity(intent);
     }
 
     public void tableButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,TableDemo.class);
+        intent=new Intent(LayoutDemo.this, TableDemo.class);
         startActivity(intent);
     }
 
     public void absoluteButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,AbsoluteDemo.class);
+        intent=new Intent(LayoutDemo.this, AbsoluteDemo.class);
         startActivity(intent);
     }
 
     public void frameButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,FrameDemo.class);
+        intent=new Intent(LayoutDemo.this, FrameDemo.class);
         startActivity(intent);
     }
 
     public void listButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,ListDemo.class);
+        intent=new Intent(LayoutDemo.this, ListDemo.class);
         startActivity(intent);
     }
 
     public void gridButton(View view)
     {
-        intent=new Intent(LayoutDemo.this,GridDemo.class);
+        intent=new Intent(LayoutDemo.this, GridDemo.class);
         startActivity(intent);
     }
 }

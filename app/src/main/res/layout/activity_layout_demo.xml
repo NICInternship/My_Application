@@ -2,53 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center"
     android:orientation="vertical"
     >
     <Button
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="linearButton"
         android:text="LINEAR(HOR)"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="relativeButton"
         android:text="RELATIVE"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="constraintButton"
         android:text="CONSTRAINT"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="tableButton"
         android:text="TABLE"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="absoluteButton"
         android:text="ABSOLUTE"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="frameButton"
         android:text="FRAME"/>
 
     <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="listButton"
         android:text="LIST VIEW"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="gridButton"
-        android:text="GRID VIEW"/>
+        android:text="GRID VIEW" />
 </LinearLayout>

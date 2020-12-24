@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void layoutNav(View view)
     {
-
+        Intent intent=new Intent(MainActivity.this,LayoutDemo.class);
+        startActivity(intent);
     }
 }
