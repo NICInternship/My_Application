@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.nic.myapplication.fragments.FragmentDemo;
 import com.nic.myapplication.layout.LayoutDemo;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void fragmentNav(View view) {
+        Intent intent=new Intent(MainActivity.this, FragmentDemo.class);
+        startActivity(intent);
     }
 
     public void bottomNav(View view) {

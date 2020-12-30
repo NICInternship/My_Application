@@ -6,13 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".fragments.FragmentDemo">
 
+
     <ToggleButton
         android:id="@+id/changeFragment"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp"
         android:onClick="onClick"
+        android:textOff="@string/fragment_one_label"
+        android:textOn="@string/fragment_two_label"
+        app:layout_constraintBottom_toTopOf="@+id/fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.nic.myapplication.fragments.FragmentOne"
+        android:layout_width="261dp"
+        android:layout_height="307dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="236dp" />
+        tools:layout="@layout/fragment_one" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
