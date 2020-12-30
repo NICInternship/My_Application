@@ -26,7 +26,7 @@ android {
                 srcDirs 'src/main/java', 'src/main/java/com/nic/myapplication/Layouts'
             }
             res {
-                srcDirs 'src/main/res', 'src/main/res/layoutRes', 'src/main/res/layouts/layoutRes', 'src/main/res/layouts/features', 'src/main/res/layouts/fragments'
+                srcDirs 'src/main/res', 'src/main/res/layoutRes', 'src/main/res/layouts/layoutRes', 'src/main/res/layouts/features', 'src/main/res/layouts/fragments', 'src/main/res/layouts/sqliteDb'
             }
         }
     }

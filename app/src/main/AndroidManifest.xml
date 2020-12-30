@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragments.FragmentDemo"></activity>
+        <activity android:name=".fragments.FragmentDemo" />
         <activity
             android:name=".layout.TableDemo"
             android:label="Table Layout" />
@@ -30,7 +30,7 @@
             android:label="Frame Layout" />
         <activity
             android:name=".layout.ConstraintDemo"
-            android:label="Constraint Layout"></activity>
+            android:label="Constraint Layout" />
         <activity
             android:name=".layout.AbsoluteDemo"
             android:label="Absolute Layout" />
