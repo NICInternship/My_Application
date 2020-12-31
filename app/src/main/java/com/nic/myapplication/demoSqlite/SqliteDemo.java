@@ -1,6 +1,7 @@
 package com.nic.myapplication.demoSqlite;
 
 import android.content.DialogInterface;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.nic.myapplication.R;
 
 public class SqliteDemo extends AppCompatActivity {
 
+    DbHelper db;
     FloatingActionButton floatingActionButton;
     AlertDialog.Builder builder;
     AlertDialog alertDialog;
@@ -28,6 +30,7 @@ public class SqliteDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite_demo);
 
+        db=new DbHelper(this);
         floatingActionButton=findViewById(R.id.fab);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -50,8 +53,18 @@ public class SqliteDemo extends AppCompatActivity {
         out_time=dialogLayout.findViewById(R.id.out_time);
         task=dialogLayout.findViewById(R.id.task);
         remarks=dialogLayout.findViewById(R.id.remarks);
-        //Toast.makeText(SqliteDemo.this,date.getText().toString()+in_time.getText().toString()+out_time.getText().toString()+task.getText().toString()+remarks.getText().toString(),Toast.LENGTH_SHORT).show();
-        Toast.makeText(SqliteDemo.this,"Inserted Successfully",Toast.LENGTH_SHORT).show();
+        String dateStr=date.getText().toString();
+        String inTimeStr=in_time.getText().toString();
+        String outTimeStr=out_time.getText().toString();
+        String taskStr=task.getText().toString();
+        String remarksStr=remarks.getText().toString();
+        boolean res=db.insertData(dateStr,inTimeStr,outTimeStr,taskStr,remarksStr);
+        if(res){
+            Toast.makeText(SqliteDemo.this,"Inserted Successfully",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(SqliteDemo.this,"Can't Insert",Toast.LENGTH_SHORT).show();
+        }
         alertDialog.dismiss();
     }
 
