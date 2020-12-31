@@ -26,7 +26,8 @@ android {
                 srcDirs 'src/main/java', 'src/main/java/com/nic/myapplication/Layouts'
             }
             res {
-                srcDirs 'src/main/res', 'src/main/res/layoutRes', 'src/main/res/layouts/layoutRes', 'src/main/res/layouts/features', 'src/main/res/layouts/fragments', 'src/main/res/layouts/sqliteDb'
+                //srcDirs 'src/main/res', 'src/main/res/layoutRes', 'src/main/res/layouts/layoutRes', 'src/main/res/layouts/features', 'src/main/res/layouts/fragments', 'src/main/res/layouts/sqliteDb', 'src/main/res/layouts/demoSqlite'
+                srcDirs 'src/main/res', 'src/main/res/layouts/layoutRes', 'src/main/res/layouts/fragments', 'src/main/res/layouts/demoSqlite'
             }
         }
     }
@@ -42,4 +43,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.2.1'
 }

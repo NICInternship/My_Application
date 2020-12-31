@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.nic.myapplication.demoSqlite.SqliteDemo;
 import com.nic.myapplication.fragments.FragmentDemo;
 import com.nic.myapplication.layout.LayoutDemo;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText input;
+    Intent intent;
     TextView label,value;
     Button submit;
     @Override
@@ -29,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void layoutNav(View view)
     {
-        Intent intent=new Intent(MainActivity.this,LayoutDemo.class);
+        intent=new Intent(MainActivity.this,LayoutDemo.class);
         startActivity(intent);
     }
 
     public void fragmentNav(View view) {
-        Intent intent=new Intent(MainActivity.this, FragmentDemo.class);
+        intent=new Intent(MainActivity.this, FragmentDemo.class);
         startActivity(intent);
     }
 
@@ -42,5 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dbNav(View view) {
+        intent=new Intent(MainActivity.this, SqliteDemo.class);
+        startActivity(intent);
     }
 }
