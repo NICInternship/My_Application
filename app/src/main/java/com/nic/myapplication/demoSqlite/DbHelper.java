@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -19,7 +20,7 @@ class DbHelper extends SQLiteOpenHelper {
     private final static String col4="OUT_TIME";
     private final static String col5="TASK";
     private final static String col6="REMARKS";
-
+    
     DbHelper(Context context) {
 
         super(context,dbName,null,1);
@@ -54,4 +55,9 @@ class DbHelper extends SQLiteOpenHelper {
         return db.rawQuery(query,null);
     }
 
+    Cursor getAllData() {
+        SQLiteDatabase db= this.getWritableDatabase();
+        String query="SELECT * FROM "+tabName;
+        return db.rawQuery(query,null);
+    }
 }

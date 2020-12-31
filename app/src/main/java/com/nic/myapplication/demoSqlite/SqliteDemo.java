@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -15,8 +16,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.nic.myapplication.R;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class SqliteDemo extends AppCompatActivity {
 
+    ExpandableListView expandableListView;
+    HashMap<String, List<String>> childList;
+    List<String> heading;
+    CustomAdapter customAdapter;
     DbHelper db;
     FloatingActionButton floatingActionButton;
     AlertDialog.Builder builder;
@@ -45,6 +54,12 @@ public class SqliteDemo extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+        expandableListView=findViewById(R.id.exp_list_view);
+        childList=ExpandableListData.getData(db);
+        heading= new ArrayList<>(childList.keySet());
+        customAdapter=new CustomAdapter(this,heading,childList);
+        expandableListView.setAdapter(customAdapter);
     }
 
     public void add(View view) {
