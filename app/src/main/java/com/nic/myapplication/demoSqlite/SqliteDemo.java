@@ -80,6 +80,10 @@ public class SqliteDemo extends AppCompatActivity {
         else{
             Toast.makeText(SqliteDemo.this,"Can't Insert",Toast.LENGTH_SHORT).show();
         }
+        childList=ExpandableListData.getData(db);
+        heading= new ArrayList<>(childList.keySet());
+        customAdapter=new CustomAdapter(this,heading,childList);
+        expandableListView.setAdapter(customAdapter);
         alertDialog.dismiss();
     }
 

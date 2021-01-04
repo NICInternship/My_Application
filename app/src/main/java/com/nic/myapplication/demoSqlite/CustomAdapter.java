@@ -88,4 +88,10 @@ class CustomAdapter extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int i, int i1) {
         return true;
     }
+
+    public void setNewItems(List<String> listDataHeader,HashMap<String, List<String>> listChildData) {
+        this.heading = listDataHeader;
+        this.childList = listChildData;
+        notifyDataSetChanged();
+    }
 }
